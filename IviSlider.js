@@ -42,7 +42,6 @@ export default class IviSlider {
             .then(function (response) {
                 return response.json();
             }).then(function (json) {
-console.log(json);
             _self._buildSlides(json)
 
         }).catch(function (ex) {
@@ -62,7 +61,8 @@ console.log(json);
             headerHeight: this.header.clientHeight,
             imageLayer: false,
             slideSpeed: 6000,
-            language: 'en'
+            language: 'en',
+            lineWithSpan: false
         };
 
         if (this.settings !== undefined) {
@@ -96,6 +96,13 @@ console.log(json);
                 let layer = document.createElement('div');
                 layer.classList.add('ivislider__layer');
                 slideItem.appendChild(layer);
+            }
+            if (this._defaultSettings().lineWithSpan == true) {
+                let line = document.createElement('div');
+                line.classList.add('ivislider__line');
+                slideItem.appendChild(line);
+                let lineSpan = document.createElement('span');
+                line.appendChild(lineSpan);
             }
         }
 

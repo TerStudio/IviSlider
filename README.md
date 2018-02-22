@@ -89,6 +89,7 @@ height | integer | 0.5 | Part of screen that should be the height of slider with
 titleclass | string | 'h2' | Class of title of each slide
 language | string | 'en' | Prefix of default language (important for multilanguage sites)
 imageLayer | boolean | false | defint if you want to have a transparent black overlay between image and title
+lineWithSpan | boolean | false | define if you want to add a span line under the slide title (you`ll need to add your own css)
 slideSpeed | integer | 0 (ms) | Defines the speed of slides change
 
 #### Browser support
