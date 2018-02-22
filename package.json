@@ -1,0 +1,19 @@
+{
+  "name": "ivislider",
+  "version": "1.0.2",
+  "description": "Easy slider for changing backgrounds and titles",
+  "main": "IviSlider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "slider",
+    "background",
+    "json",
+    "zoom",
+    "drupal",
+    "webpack"
+  ],
+  "author": "TStudio",
+  "license": "ISC"
+}
