@@ -6,7 +6,7 @@ _"IviSlider" creates responsive and light-weight slider than can be easily custo
 #### Description
 
 * IviSlider is a responsive and lightweight customizable slider. You can easily change size, class of title, speed and overlaz for images.
-* No jQuery is required.
+* No jQuery is required!
 * Accepts images src and slide titles in json format.
 * You can set the height of slider that depends on screen size
 * The slider changes size by wondow reize
