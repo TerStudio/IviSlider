@@ -100,7 +100,7 @@ export default class IviSlider {
             if (this._defaultSettings().lineWithSpan == true) {
                 let line = document.createElement('div');
                 line.classList.add('ivislider__line');
-                slideItem.appendChild(line);
+                this.area.appendChild(line);
                 let lineSpan = document.createElement('span');
                 line.appendChild(lineSpan);
             }
