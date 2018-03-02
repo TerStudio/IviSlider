@@ -97,19 +97,34 @@ export default class IviSlider {
                 layer.classList.add('ivislider__layer');
                 slideItem.appendChild(layer);
             }
-            if (this._defaultSettings().lineWithSpan == true) {
-                let line = document.createElement('div');
-                line.classList.add('ivislider__line');
-                this.area.appendChild(line);
-                let lineSpan = document.createElement('span');
-                line.appendChild(lineSpan);
-            }
+
         }
 
+        this._addSpan(elements);
         this._sliderHeight();
         this._firstSlide();
         this._runSlider(elements);
         this._addBackgrounds(elements);
+    }
+
+
+    _addSpan() {
+        if (this._defaultSettings().lineWithSpan == true) {
+            let slideItems = document.getElementsByClassName(this.sliderClass + '__item');
+            let slideTitles = document.getElementsByClassName(this.sliderClass + '__title');
+            let i = -1;
+            for (let slideItem of slideItems) {
+                i++;
+                let titleHeight = slideTitles[i].clientHeight;
+                let line = document.createElement('div');
+                line.classList.add('ivislider__line');
+                let lineSpan = document.createElement('span');
+                line.appendChild(lineSpan);
+                if ((window.innerHeight - this._defaultSettings().headerHeight - this._defaultSettings().bottomOffset - titleHeight) / 2 > (window.innerHeight - this._defaultSettings().headerHeight - this._defaultSettings().bottomOffset) * 0.4) {
+                    slideItem.appendChild(line);
+                }
+            }
+        }
     }
 
     _sliderHeight() {
